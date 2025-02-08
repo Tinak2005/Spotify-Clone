@@ -1,0 +1,28 @@
+.svg{
+    filter: invert(1);
+    /* width:20px; */
+}
+.rowflex{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+}
+.columnflex{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: center;
+    gap:15px;
+}
+.pointer{
+    cursor: pointer;
+}
+.dullcolor{
+    color:#b3b3b3;
+}
+@media screen and (max-width:900px){
+    .columnflex{
+      gap:5px;
+    }  
+}

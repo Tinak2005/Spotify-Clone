@@ -1,0 +1,602 @@
+* {
+    font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 10px;
+    margin: 4px;
+}
+
+.left {
+    width: 28vw;
+    height: 97vh;
+    font-weight: 700;
+}
+.closetab {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    display:none;
+}
+.closeleft{
+    cursor: pointer;
+}
+.right {
+    position: relative;
+    width: 72vw;
+    height: 97vh;
+    background-color: #1b19198a;
+    border-radius: 10px;
+}
+
+.top {
+    padding: 20px;
+    background-color: #1b19198a;
+    border-radius: 10px;
+    height: 16vh;
+}
+
+.search,
+.head span {
+    transition: all 0.3s ease-out;
+}
+
+.search:hover {
+    color: white;
+}
+
+.head span:hover {
+    color: white;
+}
+
+.addlogo svg {
+    fill: #b3b3b3;
+    padding: 8px;
+}
+
+.addlogo {
+    transition: all 0.2s ease-out;
+    height: 5vh;
+    border-radius: 50%;
+}
+
+.addlogo:hover {
+    background: #212020;
+}
+
+.bottom {
+    background-color: #1b19198a;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    height: 70vh;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11vw;
+    padding: 10px;
+}
+
+.scrollbox {
+    margin: 10px 0 0 0;
+    height: 30vh;
+    overflow-y: scroll;
+
+}
+
+::-webkit-scrollbar {
+    background-color: #282424bf;
+    width: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ded0d098;
+    transition: all 0.5s ease-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ded0d058;
+    cursor: pointer;
+}
+
+.box {
+    background-color: #212020;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.line1 {
+    font-weight: 800;
+    font-size: medium;
+}
+
+.line2 {
+    font-weight: 500;
+    font-size: small;
+}
+
+.create {
+    height: 5vh;
+    width: 9.5vw;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 0.1s ease-out;
+}
+
+.create:hover {
+    transform: scale(1.05);
+}
+
+.footer a {
+    text-decoration: none;
+    color: #b6b3b3dd;
+    font-weight: 100;
+    font-size: small;
+    padding: 5px;
+}
+
+.footer {
+    margin: 15px 0;
+}
+
+.lang {
+    height: 5vh;
+    width: 9vw;
+    border-radius: 20px;
+    border: solid rgb(104, 100, 100) 1.5px;
+    background-color: #1b19198a;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease-out;
+    margin: 0 10px;
+}
+
+.lang:hover {
+    transform: scale(1.06);
+    border: solid 1.5px white;
+}
+
+.header {
+    /* position:fixed;
+    width:68vw; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4vh;
+    padding: 20px;
+    background-color: #00000054;
+}
+
+.arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.backarrow,
+.nextarrow {
+    background-color: black;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    padding: 6px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.hamburger {
+    display: none;
+}
+
+.signup {
+    border: none;
+    background-color: #0000000a;
+    font-size: 1em;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.signup:hover {
+    color: white;
+    transform: scale(1.08);
+}
+
+.login:hover {
+    background-color: rgba(255, 255, 255, 0.923);
+    transform: scale(1.08);
+}
+
+.login {
+    border: none;
+    height: 7vh;
+    width: 8vw;
+    border-radius: 40px;
+    font-size: 1em;
+    font-weight: bolder;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    overflow-y: scroll;
+    height: 64vh;
+}
+
+.card {
+    background-color: #1c1b1b;
+    border-radius: 10px;
+    margin: 6px;
+    padding: 5px;
+    width: 203px;
+    height: 315px;
+}
+
+.card-content {
+    position: relative;
+    width: 198px;
+    height: 310px;
+    overflow: hidden;
+
+}
+
+.card-content>* {
+    padding: 5px;
+
+}
+
+.card-content img {
+    width: 96%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.play-button {
+    position: absolute;
+    right: 10px;
+    top: 140px;
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+}
+
+.play-button:hover {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.about {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.playbar {
+    position: fixed;
+    bottom: 13px;
+    width: 68vw;
+    height: 8vh;
+    border-radius: 10px;
+    margin: 0 14px;
+    background-color: #dad5d515;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2vh;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.scrollbox ul {
+    display: inline-block;
+    padding: 0px;
+}
+
+.scrollbox ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: solid rgba(255, 255, 255, 0.578) 2px;
+    margin: 10px 3px;
+    padding: 20px 15px;
+    border-radius: 12px;
+    height: 6vh;
+    width: 19vw;
+}
+
+.scrollbox ul li .songinfo {
+    font-size: 0.8vw;
+    font-weight: 600;
+    /* width:19vw; */
+    text-align: left;
+    padding: 0px 10px;
+}
+
+.scrollbox ul li .play {
+    font-size: 0.8vw;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.578);
+    text-align: center;
+    width: 10vw;
+}
+
+.playbar .seekbar {
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    width: 99.5%;
+    background-color: white;
+    border: solid white 0.5px;
+    cursor: pointer;
+}
+
+.seekbar .circle {
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+    transition: left 0.5s;
+}
+
+.song-info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(255, 255, 255, 0.664);
+    font-size: 14px;
+    width: 28vw;
+    text-align: left;
+    padding: 10px;
+}
+
+.songtime {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(255, 255, 255, 0.664);
+    font-size: 14px;
+    width: 28vw;
+    text-align: right;
+    padding: 10px;
+}
+.vol-icon{
+   height:22px;
+}
+.volume{
+    display:flex;
+    /* flex-direction: column;  */
+    align-items:center;
+    justify-content: center;
+    margin:0 10px ;
+}
+.volume-range input{
+    height:5px;
+    width:60px;
+}
+.volume-range input::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    /* height: 10px;
+    width: 10px; */
+    border-radius: 2px;
+    cursor: pointer
+  }
+@media screen and (max-width:900px) {
+    .left {
+        position: absolute;
+        left: -100%;
+        z-index: 1;
+        background-color: #040404;
+        width: 35vw;
+        margin: 0px 10px;
+    }
+    .closetab {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        display:flex;
+    }
+    .top {
+        z-index: 2;
+        height: 16vh;
+        background-color: #1b1919;
+    }
+
+    .bottom {
+        z-index: 2;
+        height: 69vh;
+        background-color: #1b1919;
+    }
+
+    .right {
+        width: 100vw;
+    }
+
+    .playbar {
+        width: 93vw;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .footer {
+        margin: 10px 0;
+    }
+
+    .scrollbox ul li {
+        height: 6vh;
+        width: 24vw;
+    }
+
+    .scrollbox ul li .songinfo {
+        width: 11vw;
+        font-size: 10px;
+    }
+
+    .scrollbox ul li .play {
+        font-size: 10px;
+        width: 7vw;
+    }
+
+    .footer a {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .search,
+    .head span,
+    .home span {
+        font-size: 15px;
+    }
+
+    .logo {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .playbar {
+        width: 89vw;
+    }
+
+    .login {
+        height: 29px;
+        width: 70px;
+        font-size: 0.8em;
+    }
+
+    .signup {
+        font-size: 0.8em;
+        margin: 0 10px;
+        width: 60px;
+    }
+
+    .song-info {
+        font-size: 10px;
+        width: 28vw;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .songtime {
+        font-size: 9px;
+        width: 28vw;
+    }
+    .left {
+        width: 65vw;
+    }
+.scrollbox ul li {
+    margin: 10px 1px;
+    padding: 18px 7px;
+    height: 6vh;
+    width: 45vw;
+}
+.musicsvg svg, .playsvg>svg{
+    height: 20px;
+    width:20px;
+}
+.scrollbox ul li .songinfo {
+    width: 15vw;
+    font-size: 10px;
+    text-align: left;
+}
+
+.scrollbox ul li .play {
+    font-size: 9px;
+    width: 6vw;
+}
+.footer a {
+    font-size: 8.5px;
+    padding: 3px;
+}
+.lang {
+    height: 4vh;
+    width: 18vw;
+    margin: 0 7px;
+    font-size: 10px;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    overflow-y: scroll;
+    height: 64vh;
+}
+
+.card {
+    background-color: #1c1b1b;
+    border-radius: 10px;
+    margin: 6px;
+    padding: 5px;
+    width: 260px;
+    height: 370px;
+}
+
+.card-content {
+    position: relative;
+    width: 250px;
+    height: 370px;
+    overflow: hidden;
+
+}
+
+.card-content>* {
+    padding: 5px;
+
+}
+
+.card-content img {
+    width: 96%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.vol-icon{
+    height:10px;
+ }
+ .vol-icon img{
+    height:20px;
+    width:20px
+ }
+ .volume{
+     display:flex;
+      flex-direction: column; 
+     align-items:start;
+     margin:0 10px ;
+ }
+ .volume-range input{
+     height:3px;
+     width:40px;
+ }
+}
